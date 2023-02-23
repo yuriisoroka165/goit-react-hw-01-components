@@ -1,5 +1,12 @@
 @import-normalize; /* bring in normalize.css styles */
 
+:root {
+  --background-lightblue-color: #bac0c2;
+  --font-color: #858585;
+  --border-color: #b3afaf;
+  --global-black-color: #000000;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,9 +14,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--font-color);
+  background-color: var(--background-lightblue-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p {
+  margin: 0;
 }
