@@ -7,12 +7,12 @@ export const Statistics = ({title, stats}) => {
             {title && (
                 <h2 className={css.title}>{title}</h2>
             )}
-
+            
             <ul className={css.stat_list}>
-                {stats.map(stat => (
-                    <li key={stat.id} className={css.item}>
-                        <span className={css.label}>{stat.label}</span>
-                        <span className={css.percentage}>{stat.percentage}%</span>
+                {stats.map(({id, label, percentage}) => (
+                    <li key={id} className={css.item}>
+                        <span className={css.label}>{label}</span>
+                        <span className={css.percentage}>{percentage}%</span>
                     </li>
                 ))}
             </ul>
@@ -21,6 +21,11 @@ export const Statistics = ({title, stats}) => {
 };
 
 Statistics.propTypes = {
-    label: PropTypes.string,
-    percentage: PropTypes.number
-};
+    stats: PropTypes.arrayOf(
+        PropTypes.exact({
+            label: PropTypes.string,
+            percentage: PropTypes.number,
+            id: PropTypes.string
+        }),
+    ),
+}

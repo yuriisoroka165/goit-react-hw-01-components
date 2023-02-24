@@ -7,7 +7,7 @@
     margin-right: auto;
     overflow: hidden;
     border-radius: 5px;
-    background-color: white;
+    background-color: var(--global-white-color);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     margin-bottom: 100px;
 }
@@ -36,13 +36,13 @@
 }
 
 .item:nth-child(2n) {
-    background-color: lightseagreen;
-    color: white;
+    background-color: #20b2aa;
+    color: var(--global-white-color);
 }
 
 .item:nth-child(odd) {
-    background-color: purple;
-    color: white;
+    background-color: #800080;
+    color: var(--global-white-color);
 }
 
 .label {
